@@ -17,5 +17,14 @@ function agregarAmigo() {
     } else {
         alert("Por favor, ingresa un nombre válido.");
     }
+}  
+
+function actualizarListaAmigos() {
+    listaAmigos.innerHTML = ''; // Limpia la lista
+    amigos.forEach(amigo => {
+        const itemLista = document.createElement('li');
+        itemLista.textContent = amigo;
+        listaAmigos.appendChild(itemLista);
+    });
 }
 
