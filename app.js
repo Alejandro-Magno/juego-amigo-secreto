@@ -26,5 +26,18 @@ function actualizarListaAmigos() {
         itemLista.textContent = amigo;
         listaAmigos.appendChild(itemLista);
     });
+} 
+
+function sortearAmigo() {
+    if (amigos.length < 2) {
+        resultado.textContent = "Debes ingresar al menos dos amigos para sortear.";
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSeleccionado = amigos[indiceAleatorio];
+
+    resultado.innerHTML = `¡El amigo secreto es: <strong>${amigoSeleccionado}</strong>!`;
 }
+
 
